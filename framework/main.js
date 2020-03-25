@@ -19,7 +19,7 @@ document.getElementById('addStyle').addEventListener('click', () => {
 });
 
 document.getElementById(('export')).addEventListener('click', () => {
-    document.getElementById('exporttext').innerText = styleManager.export();
+    document.getElementById('exporttext').value = styleManager.export();
 });
 
 function newElement(elementName) {
