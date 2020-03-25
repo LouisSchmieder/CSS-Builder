@@ -59,9 +59,10 @@ class StyleManager {
     export() {
         let style = 'element {';
         for(let element in this.styleData) {
-            console.log(element);
+            style += element + ':' + this.styleData[element] + ';';
         }
         style += '}'
+        return style;
     }
 
 }

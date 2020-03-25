@@ -20,6 +20,7 @@ document.getElementById('addStyle').addEventListener('click', () => {
 
 document.getElementById(('export')).addEventListener('click', () => {
     let stylesheetsnippet = styleManager.export();
+    console.log(stylesheetsnippet);
 });
 
 function newElement(elementName) {
