@@ -19,7 +19,7 @@ class StyleManager {
                 width = parseInt(this.styleData['width'].replace('%', ''));
                 format = '%';
             }
-            this.element.style.left = 'calc(50% - ' + width + '' + format + ')';
+            this.element.style.left = 'calc(50% - ' + width / 2 + '' + format + ')';
         }
         if(this.styleData['height'] != null) {
             let height;
@@ -31,7 +31,7 @@ class StyleManager {
                 height = parseInt(this.styleData['height'].replace('%', ''));
                 format = '%';
             }
-            this.element.style.top = 'calc(50% - ' + height + '' + format + ')';
+            this.element.style.top = 'calc(50% - ' + height / 2 + '' + format + ')';
         }
 
         if (document.getElementById(styleName) === null) {
