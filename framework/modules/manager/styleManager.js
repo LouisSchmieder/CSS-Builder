@@ -20,7 +20,7 @@ class StyleManager {
                 width = parseInt(this.styleData['width'].replace('%', ''));
                 format = '%';
             }
-            left = window.screen.availWidth / 2 - width / 2;
+            left = window.screen.width / 2 - width / 2;
             this.element.style.left = left + '' + format;
         }
         if(this.styleData['height'] != null) {
@@ -34,7 +34,7 @@ class StyleManager {
                 height = parseInt(this.styleData['height'].replace('%', ''));
                 format = '%';
             }
-            top = window.screen.availHeight * 0.3 / 2 - height / 2;
+            top = window.screen.height * 0.3 / 2 - height / 2;
             this.element.style.top = top + format;
         }
 
