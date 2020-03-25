@@ -10,7 +10,6 @@ class StyleManager {
         this.styleData[styleName] = this.element.style[styleName];
 
         if(this.styleData['width'] != null) {
-            let left;
             let width;
             let format = '';
             if(this.styleData['width'].endsWith('px')) {
@@ -20,11 +19,9 @@ class StyleManager {
                 width = parseInt(this.styleData['width'].replace('%', ''));
                 format = '%';
             }
-            left = window.screen.width / 2 - width / 2;
-            this.element.style.left = left + '' + format;
+            this.element.style.left = 'calc(50% - ' + width + '' + format + ')';
         }
         if(this.styleData['height'] != null) {
-            let top;
             let height;
             let format = '';
             if(this.styleData['height'].endsWith('px')) {
@@ -34,8 +31,7 @@ class StyleManager {
                 height = parseInt(this.styleData['height'].replace('%', ''));
                 format = '%';
             }
-            top = window.screen.height * 0.3 / 2 - height / 2;
-            this.element.style.top = top + format;
+            this.element.style.top = 'calc(50% - ' + height + '' + format + ')';
         }
 
         if (document.getElementById(styleName) === null) {
