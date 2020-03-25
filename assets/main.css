@@ -20,3 +20,13 @@
     height: 100%;
     background-color: rgba(20, 20, 20, 0.8);
 }
+
+#new {
+    position: absolute;
+    left: 10px;
+}
+
+#addStyle {
+    position: absolute;
+    left: 70px;
+}

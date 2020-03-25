@@ -6,8 +6,11 @@ class StyleManager {
     }
 
     style(styleName, value) {
+        console.log('---------------------')
+        console.log(this.element);
         this.element.style[styleName] = value;
-        this.styleData[styleName] = value;
+        console.log(this.element);
+        this.styleData[styleName] = this.element.style[styleName];
         if (document.getElementById(styleName) === null) {
             this.addNewToList(styleName);
         }
@@ -17,14 +20,13 @@ class StyleManager {
         let element = document.createElement('div');
         element.id = styleName;
         element.class = 'listEntry';
-        let label = document.createElement('p');
-        label.innerText = styleName;
+        element.innerText = styleName;
         let value = document.createElement('input');
         value.id = styleName + '_value';
         value.addEventListener('change', () => {
             this.style(styleName, value.innerText);
         });
-        element.appendChild(label);
+        value.innerText = this.styleData[styleName];
         element.appendChild(value);
         document.getElementById('list').appendChild(element);
         return element;
