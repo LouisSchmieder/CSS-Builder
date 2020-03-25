@@ -18,6 +18,10 @@ document.getElementById('addStyle').addEventListener('click', () => {
     }
 });
 
+document.getElementById(('export')).addEventListener('click', () => {
+    let stylesheetsnippet = styleManager.export();
+});
+
 function newElement(elementName) {
     let element = document.createElement(elementName);
     document.getElementById('view').appendChild(element);
