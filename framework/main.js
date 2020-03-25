@@ -1,4 +1,4 @@
-import { StyleManager } from "./modules/manager/styleManager";
+import { StyleManager } from "./modules/manager/styleManager.js";
 
 window.addEventListener('load', () => {
     main();
