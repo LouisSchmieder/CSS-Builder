@@ -61,7 +61,7 @@ class StyleManager {
         for(let element in this.styleData) {
             style += element + ':' + this.styleData[element] + ';';
         }
-        style += '}'
+        style += '}';
         return style;
     }
 

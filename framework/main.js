@@ -1,4 +1,4 @@
-import { StyleManager } from "./modules/manager/styleManager.js";
+import {StyleManager} from "./modules/manager/styleManager.js";
 
 var styleManager;
 
@@ -19,8 +19,7 @@ document.getElementById('addStyle').addEventListener('click', () => {
 });
 
 document.getElementById(('export')).addEventListener('click', () => {
-    let stylesheetsnippet = styleManager.export();
-    console.log(stylesheetsnippet);
+    document.getElementById('exporttext').innerText = styleManager.export();
 });
 
 function newElement(elementName) {
